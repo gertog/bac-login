@@ -26,8 +26,13 @@ if ($result=mysqli_query($connection,$sql))
           $_SESSION['department']=$department;
           $_SESSION['access']=$access;
           $_SESSION['active']=$active;
-          
-          header( "refresh:3;url=../index.php" );
+          $_SESSION['id']=$id;
+          if (isset($_POST["remember"])){
+              echo "I will remember";
+          }else{
+              echo "After this, you are dead to me";
+          }
+          header( "refresh:6;url=../index.php" );
       }else{
           echo "failed<br>";
           header( "refresh:3;url=../index.php?page=login" );

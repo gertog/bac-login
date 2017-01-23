@@ -4,7 +4,8 @@
       <div class="container-fluid">
           <?PHP echo "Welcome, ".$name;
           if (isset($_SESSION['access'])||isset($_SESSION['active'])) {
-              echo '<a href="index.php?page=logout" id="logout_menu">Logout</a>';
+              echo '<a href="index.php?page=logout" id="logout_menu">Logout</a>
+              <a href="index.php?page=account" id="logout_menu">Account</a>';
           }
           ?>
         <!-- Brand and toggle get grouped for better mobile display -->
